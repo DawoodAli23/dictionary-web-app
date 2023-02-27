@@ -2,17 +2,15 @@ const BookIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      fill="none"
+      width="40"
+      height="40"
       viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="h-6 w-6"
     >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
-      />
+      <g fill="none" fillRule="evenodd" stroke="none" strokeWidth="1">
+        <g fill="#212121" fillRule="nonzero">
+          <path d="M18 2a2.5 2.5 0 012.5 2.5v14.25a.75.75 0 01-.75.75H5.5a1 1 0 001 1h13.25a.75.75 0 010 1.5H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2H18zm0 1.5H6.5a1 1 0 00-1 1V18H19V4.5a1 1 0 00-1-1zM16 5a1 1 0 011 1v2a1 1 0 01-1 1H8a1 1 0 01-1-1V6a1 1 0 011-1h8zm-.5 1.5h-7v1h7v-1z"></path>
+        </g>
+      </g>
     </svg>
   );
 };
