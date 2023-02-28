@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 function App() {
-  const [count, setCount] = useState(0);
-
+  const [updatedWord, setUpdatedWord] = useState("");
+  const [word, setWord] = useState("");
+  document.addEventListener("keydown", (event) => {
+    event.key == "Enter" && setUpdatedWord(word);
+  });
   return (
     <div className="grid w-full place-items-center">
       <div className="grid w-2/4 ">
         <Navbar />
         <input
           placeholder="keyboard"
-          className="h-12 rounded-lg bg-[#f4f4f4] outline-none"
+          className="mt-6 h-12 rounded-lg bg-[#f4f4f4] pl-2 outline-none"
+          onChange={(e) => setWord(e.target.value)}
         />
+        <h1>{updatedWord}</h1>
       </div>
     </div>
   );
