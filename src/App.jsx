@@ -1,10 +1,22 @@
 import React, { useState } from "react";
+import axios from "axios";
 import Navbar from "./components/Navbar";
 function App() {
   const [updatedWord, setUpdatedWord] = useState("");
   const [word, setWord] = useState("");
-  document.addEventListener("keydown", (event) => {
-    event.key == "Enter" && setUpdatedWord(word);
+  const [resposne, setResposne] = useState(null);
+  document.addEventListener("keydown", async (event) => {
+    if (event.key == "Enter") {
+      setUpdatedWord(word);
+      try {
+        const result = await axios.get(
+          `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
+        );
+        setResposne(result);
+      } catch (error) {
+        console.log("=====<>", error);
+      }
+    }
   });
   return (
     <div className="grid w-full place-items-center">
