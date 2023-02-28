@@ -11,11 +11,11 @@ function App() {
       <div className="grid w-2/4 ">
         <Navbar />
         <input
-          placeholder="keyboard"
+          placeholder="Enter a word"
           className="mt-6 h-12 rounded-lg bg-[#f4f4f4] pl-2 outline-none"
           onChange={(e) => setWord(e.target.value)}
         />
-        <h1>{updatedWord}</h1>
+        <h1 className="pt-6 text-4xl font-medium">{updatedWord}</h1>
       </div>
     </div>
   );
